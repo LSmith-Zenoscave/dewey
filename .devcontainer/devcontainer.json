@@ -1,0 +1,21 @@
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/devcontainers/python:3.11",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/home/vscode/.code-venv/bin/python3.11",
+				"terminal.integrated.env.linux": {
+					"PYTHONPATH": "${workspaceFolder}/src;${workspaceFolder}/tests"
+				},
+				"python.envFile": "${workspaceFolder}/.env"
+			},
+			"extensions": []
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
+	},
+	"postCreateCommand": ".devcontainer/create.sh",
+	"postStartCommand": ".devcontainer/start.sh"
+}
